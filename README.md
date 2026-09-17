@@ -88,7 +88,30 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int i;
+
+    for(i = 1; i <= 10; i++)
+    {
+        printf("15 x %d = %d\n", i, 15 * i);
+    }
+
+    return 0;
+}
 # Output:
+15 x 1 = 15
+15 x 2 = 30
+15 x 3 = 45
+15 x 4 = 60
+15 x 5 = 75
+15 x 6 = 90
+15 x 7 = 105
+15 x 8 = 120
+15 x 9 = 135
+15 x 10 = 150
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +154,36 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int n, i = 2, flag = 1;
+
+    scanf("%d", &n);
+
+    while (i <= n / 2)
+    {
+        if (n % i == 0)
+        {
+            flag = 0;
+            break;
+        }
+        i++;
+    }
+
+    if (n <= 1)
+        flag = 0;
+
+    if (flag)
+        printf("Prime number");
+    else
+        printf("Not a prime number");
+
+    return 0;
+}
 # Output:
+Prime number
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +231,31 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+#include <stdio.h>
+
+int main()
+{
+    int n, i, j;
+
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = 1; j <= i; j++)
+        {
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
 # Output:
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +308,37 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+  ## program:
+  #include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    for(i = 1; i <= 7; i++)
+    {
+        for(j = i; j <= 7; j++)
+            printf("%d ", j);
+
+        printf("0 ");
+
+        for(j = 7; j >= i; j--)
+            printf("%d ", j);
+
+        printf("\n");
+    }
+
+    return 0;
+}
+## output:
+1 2 3 4 5 6 7 0 7 6 5 4 3 2 1
+2 3 4 5 6 7 0 7 6 5 4 3 2
+3 4 5 6 7 0 7 6 5 4 3
+4 5 6 7 0 7 6 5 4
+5 6 7 0 7 6 5
+6 7 0 7 6
+7 0 7
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
